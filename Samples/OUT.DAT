@@ -1,0 +1,276 @@
+
+     ************************************************************************
+     ***     PROGRAM: CAPS                                                ***
+     ***     Comprehensive Analyzer of Plane Structures                   ***
+     ***          Version 1.5    08/24/2020                               ***
+     ***          COPYRIGHT (2020)                                        ***
+     ***                                                                  ***
+     ***     This program is intended to facilitate the analysis of       ***
+     ***     wood structures.  It creates a structural response           ***
+     ***     report from the input analog.  Accuracy of the analog        ***
+     ***     and interpretation of the structural adequacy are the        ***
+     ***     responsibility of the user.  The author assumes no           ***
+     ***     responsibility, explicit or implied.                         ***
+     ***                                                                  ***
+     ************************************************************************
+
+ ================================================================================
+
+ STRUCTURE   1
+ --------------------
+ Format: STANDARD
+     ID: EXAMPLE SHED FRAME. 4/12 SLOPE, 2X4 CONST
+ --------------------------------------------------------------------------------
+ Number of Nodes .............. 6
+ Number of Members ............ 8
+ Number of Roller Supports .... 2
+ Number of Pinned Supports .... 1
+ Number of FIRL   Supports .... 0
+ Number of Fixed  Supports .... 0
+ Report Input ................. True
+ Report Results ............... All Tables
+ Number of Load Cases ......... 1
+ Number of Member Divisions ... 24
+
+ ================================================================================
+
+ TABLE  1:        Member Group Properties
+
+              Allowable Member Stresses in PSI
+                Normal Load Duration (100%)
+
+  Member Use      Allowable                     Modulus of    Shear
+  Group  Type  Bend  Comp  Tens   Width  Depth  Elasticity    Modulus
+
+     1   S      1600  1450  1300  1.500  3.500   1.8000E+06  9.3750E+04
+     2   U      1600  1450  1300  1.500  3.500   1.8000E+06  9.3750E+04
+     3   FICT   9000     0     0  1.500  3.500   1.8000E+07  9.3750E+05
+     4   UI     1200  1000   900  1.500  3.500   1.6000E+06  8.3333E+04
+
+ TABLE  2:        Node Coordinates
+
+   Node    (X-Coordinate  Y-Coordinate)
+  Number   (   inches   ,    inches   )
+
+     1     (      0.0000,       0.0000)
+     2     (      0.0000,      50.0000)
+     3     (     70.2500,      26.6000)
+     4     (    140.5000,       3.1800)
+     5     (    140.5000,       0.0000)
+     6     (     70.2500,       0.0000)
+
+ TABLE  3:        Member Layout
+
+  Member      Negative End       Positive End     Member
+  Number    Node   Condition   Node   Condition   Group
+
+      1        1     RIGID        2     RIGID         4
+      2        2     RIGID        3     RIGID         1
+      3        3     RIGID        4     RIGID         1
+      4        5     RIGID        4     RIGID         3
+      5        6     RIGID        5     RIGID         2
+      6        1     RIGID        6     RIGID         2
+      7        1     PINNED       3     PINNED        4
+      8        6     RIGID        3     RIGID         4
+
+ TABLE  4:        Reaction Conditions
+
+   Node   Reaction    Horizontal     Vertical
+  Number    Type     Displacement  Displacement
+
+      1     PIN           0.0000        0.0000
+      2     ROLL          0.0000        1.0000
+      3     ROLL         12.0000        2.0000
+
+ TABLE  5:        Member Information and Overrides
+
+  Member  Member  Effective Column Lengths  Effective Bending
+  Number  Length    In-Plane   Perp-Plane       Length
+          (IN)       (IN)        (IN)           (IN)
+
+      1     50.000     N/A         N/A            N/A   
+      2     74.045     N/A         N/A            N/A   
+      3     74.051     N/A         N/A            N/A   
+      4      3.180     N/A         N/A            N/A   
+      5     70.250     N/A         N/A            N/A   
+      6     70.250     N/A         N/A            N/A   
+      7     75.117     N/A         N/A            N/A   
+      8     26.600     N/A         N/A            N/A   
+
+ ***** LOAD CASE:   1 ********************************************************
+
+ TABLE  6:        Loads
+
+  Stress Adjustment Factor:  1.15
+
+ TABLE  6 A:      Concentrated Loads
+
+  Member   Load   Horizontal    Vertical   Distance to Point Load
+  Number  Number  Compression  Compression   from Negative End
+                     (LBS)        (LBS)            (IN)
+
+     6       1          0.000     -550.000          46.250
+
+ TABLE  6 B:      Uniform Loads
+
+  Member  Horizontal    Vertical
+  Number  Compression  Compression
+            (LBS)        (LBS)
+
+     2          0.000       -5.000
+     3          0.000       -5.000
+
+ TABLE  6 C:      Nodal Loads
+
+   Node   Direction  Load in LBS or IN-LBS
+  Number   of Load      as appropriate
+
+     4           Y           -128.800
+     4      Moment          -1657.700
+
+ TABLE  6 D:      Trapezoidal Loads
+
+ ---------- NONE ----------
+
+ *****************************************************************************
+ ********************************** RESULTS **********************************
+ *****************************************************************************
+
+ * * * * * * * * * * * * * * * REACTION ANALYSIS * * * * * * * * * * * * * * *
+
+ TABLE  7:        Reactions
+
+  Reaction         Horz. Comp.      Vert. Comp.        Moment
+    Node              (LBS)            (LBS)          (IN-LBS)
+
+       1                -0.515           148.373         2.9722E+03
+       2                -0.190           176.067         2.0595E+03
+       3                 0.726           350.718         5.5228E+00
+
+ TABLE  7 A:      Zero Check (Load - Reaction)
+
+                   Horz. Comp.      Vert. Comp.        Moment
+                      (LBS)            (LBS)          (IN-LBS)
+
+       Loads:           0.000         -1381.300        -9.4542E+04
+   Reactions:           0.021           675.158         2.9665E+04
+  --------------------------------------------------------------------
+  Difference:           0.021           706.142         6.4877E+04
+
+ * * * * * * * * * * * * * * * STRENGTH ANALYSIS * * * * * * * * * * * * * * *
+
+ TABLE  8:        Member End Actions
+
+  Member    Location       Axial          Shear        Moment
+  Number                   (LBS)          (LBS)       (IN-LBS)
+
+      1 ---[ Neg End         -0.315          0.071          1.763
+           [ Pos End          0.315         -0.071          1.763
+
+      2 ---[ Neg End        -55.789        166.663       2057.690
+           [ Pos End        -55.215        166.586      -2054.862
+
+      3 ---[ Neg End        -55.484        166.648       2057.666
+           [ Pos End        -55.605        166.573      -2054.886
+
+      4 ---[ Neg End          0.000          8.844         14.062
+   FICT    [ Pos End          0.000         -8.844         14.062
+
+      5 ---[ Neg End          0.000          0.042          1.474
+           [ Pos End          0.000         -0.042          1.474
+
+      6 ---[ Neg End         -0.252        148.761       2970.412
+           [ Pos End          0.252        401.239      -5719.979
+
+      7 ---[ Neg End         -0.206          0.000          0.000
+           [ Pos End          0.206          0.000          0.000
+
+      8 ---[ Neg End          0.495          0.204          2.719
+           [ Pos End         -0.495         -0.204          2.719
+
+ TABLE  9:        NDS-1991 Interaction Analysis
+                  Using Maximum Axial Force and Maximum Moment
+
+  Member  Prop  Notes    Max       Loc from Neg End     Bending    Axial
+  Number  Type           Int       Bend       Axial     Stress     Stress       L/D
+                         Val       (IN)       (IN)      (PSI)      (PSI)
+
+      1   UI              0.000     50.000     50.000      0.576      0.060     26.667
+      2              Mixed Tension and Compression: Special Analysis required!
+      3              Mixed Tension and Compression: Special Analysis required!
+      4     Fictitious Member: No Interaction Analysis performed!
+      5   U      P        0.000     70.250     70.250      0.481      0.000     46.833
+      6   U     D         1.057     70.250     70.250  -1867.748      0.048     46.833
+      7   UI              0.000     75.117     75.117      0.000      0.039     40.063
+      8   UI     P        0.000      0.000     26.600     -0.888     -0.094     14.187
+
+
+     P  Interaction value critical for Perpendicular Plane!
+     D  Max. Int. value is Stress Difference: NDS 3.10.1
+
+
+ TABLE  9 A:      Member Force Analysis Data
+
+                        Final Adjusted Stresses              Effective Lengths
+                    --------------------------------  --------------------------------
+                                             FBend
+  Member    Length     FAxial     FBend      Prime     In-Plane  Perp-Plane  Bending
+  Number     (in)      (PSI)      (PSI)      (PSI)       L/D        L/D       Length
+
+      1      50.000   1035.000   1380.000   1354.121      11.429     26.667     92.000
+      2      74.045      0.000   1840.000      0.000       0.000      0.000      0.000
+      3      74.051      0.000   1840.000      0.000       0.000      0.000      0.000
+      4     Fictitious Member: No Member Force Analysis performed!
+      5      70.250   -238.254   1840.000   1767.469      10.065     46.833    129.260
+      6      70.250   1495.000   1840.000   1767.469      20.071     46.833    129.260
+      7      75.117   1035.000   1380.000   1333.808      17.170     40.063    138.216
+      8      26.600  -1004.009   1380.000   1366.656       3.822     14.187     53.858
+
+
+ TABLE 10:        Shear Stress Analysis
+
+               Max. Shear      Location from       Member
+  Member         Stress          Neg. End          Length
+  Number         (PSI)             (in)             (in)
+
+      1            0.020           50.000           50.000
+      2            0.000            0.000           74.045
+      3            0.000            0.000           74.051
+      4     Fictitious Member: No Shear Stress Analysis performed!
+      5            0.012           70.250           70.250
+      6         -114.640           70.250           70.250
+      7            0.000           75.117           75.117
+      8            0.058           26.600           26.600
+
+
+ * * * * * * * * * * * * * *  DEFLECTION ANALYSIS * * * * * * * * * * * * * * 
+
+ TABLE 11:        Maximum Member Deflections
+
+              Maximum       Location from     Member
+  Member     Deflection     Negative End      Length
+  Number        (in)            (in)           (in)
+
+      1        -0.0000         39.5833        50.0000
+      2        -0.0428         37.0224        74.0447
+      3        -0.0428         37.0255        74.0511
+      4     Fictitious Member: No Member Deflection Analysis performed!
+      5         0.0000         14.6354        70.2500
+      6        -7.3727         70.2500        70.2500
+      7        -0.0000         75.1174        75.1174
+      8        -0.0000         21.0583        26.6000
+
+
+ TABLE 12:        Node Displacements
+
+          Horiz. Displacement   Vertical            Rotational
+   Node   or Roller Direction  Displacement        Displacement
+  Number      (inches)          (inches)      (radians)     (degrees)
+
+      1       0.000000          0.000000     1.8742E-06     0  0'  0.387"
+      2       0.000000          0.000002     1.8742E-06     0  0'  0.387"
+      3       0.000002          0.000000     1.8742E-06     0  0'  0.387"
+      4       0.000002          0.000002     1.8742E-06     0  0'  0.387"
+      5       0.000002          0.000002     1.8742E-06     0  0'  0.387"
+      6       0.000002          0.000002     1.8742E-06     0  0'  0.387"
+

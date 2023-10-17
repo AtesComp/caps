@@ -1,0 +1,36 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "process",
+			"label": "CMake Clean project",
+			"command": "${command:cmake.clean}",
+			"problemMatcher": [],
+			"group": "none"
+		},
+		{
+			"type": "process",
+			"label": "CMake Configure project for build",
+			"command": "${command:cmake.configure}",
+			"problemMatcher": [],
+			"group": "none"
+		},
+		{
+			"type": "process",
+			"label": "CMake Clean and Configure project for build",
+			"command": "${command:cmake.cleanConfigure}",
+			"problemMatcher": [],
+			"group": "none"
+		},
+		{
+			"type": "cmake",
+			"label": "CMake Build project on CMakeLists.txt file",
+			"command": "build",
+			"problemMatcher": [],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		}
+	]
+}

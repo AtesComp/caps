@@ -1,0 +1,507 @@
+
+     ************************************************************************
+     ***     PROGRAM: CAPS                                                ***
+     ***     Comprehensive Analyzer of Plane Structures                   ***
+     ***          Version  1.06  Release 10/25/2020                       ***
+     ***          COPYRIGHT (2020)                                        ***
+     ***                                                                  ***
+     ***     This program is intended to facilitate the analysis of       ***
+     ***     wood structures.  It creates a structural response           ***
+     ***     report from the input analog.  Accuracy of the analog        ***
+     ***     and interpretation of the structural adequacy are the        ***
+     ***     responsibility of the user.  The author assumes no           ***
+     ***     responsibility, explicit or implied.                         ***
+     ***                                                                  ***
+     ************************************************************************
+
+ ================================================================================
+
+ STRUCTURE   1
+ --------------------
+ Format: FREE
+     ID: New Fink Truss
+ --------------------------------------------------------------------------------
+ Nodes .............. 22
+ Members ............ 31
+ Roller Supports .... 0
+ Pinned Supports .... 0
+ FIRL   Supports .... 1
+ Fixed  Supports .... 1
+ Report Input ....... True
+ Report Results ..... All Tables
+ Load Cases ......... 1
+ Member Divisions ... 24 + start + end
+
+ ================================================================================
+
+ TABLE  1:        Material Properties
+
+              Allowable Material Stresses in PSI
+                @ Normal Load Duration (100%)
+
+  Group  Use      Allowable                     Modulus of    Shear
+    ID   Type  Bend  Comp  Tens   Width  Depth  Elasticity    Modulus
+
+     1   TD     2300  2000  1100  1.500  3.500   1.7000E+06  8.8542E+04
+     2   UI      980   975   475  1.500  3.500   1.4000E+06  7.2917E+04
+     3   FICT      0     0     0  0.063  1.000   3.0000E+06  0.0000E+00
+
+ TABLE  2:        Node Coordinates
+
+   Node    (X-Coordinate  Y-Coordinate)
+    ID     (   inches   ,    inches   )
+
+     1     (      1.7500,       0.0000)
+     2     (      2.4670,       3.4400)
+     3     (      3.2500,       1.8750)
+     4     (      6.9130,       1.7500)
+     5     (     71.2170,      37.8150)
+     6     (     73.0490,      34.8180)
+     7     (     94.2500,       5.8880)
+     8     (     96.0000,       1.7500)
+     9     (     97.7500,       6.0070)
+    10     (    141.9010,      69.2440)
+    11     (    142.2500,      73.3320)
+    12     (    145.7500,      73.3320)
+    13     (    146.0990,      69.2440)
+    14     (    190.2500,       6.0070)
+    15     (    192.0000,       1.7500)
+    16     (    193.7500,       5.8880)
+    17     (    214.9510,      34.8180)
+    18     (    216.7830,      37.8150)
+    19     (    281.0870,       1.7500)
+    20     (    284.7500,       1.8750)
+    21     (    285.5330,       3.4400)
+    22     (    286.2500,       0.0000)
+
+ TABLE  3:        Member Layout
+
+  Member     Negative End      Positive End     Group
+    ID      Node  Condition   Node  Condition     ID
+
+      1        2    RIGID         5    RIGID        1
+      2        4    RIGID         8    RIGID        1
+      3        5    RIGID        11    RIGID        1
+      4        8    RIGID        15    RIGID        1
+      5       12    RIGID        18    RIGID        1
+      6       15    RIGID        19    RIGID        1
+      7       18    RIGID        21    RIGID        1
+      8        7    RIGID         6    RIGID        2
+      9        9    RIGID        10    RIGID        2
+     10       14    RIGID        13    RIGID        2
+     11       16    RIGID        17    RIGID        2
+     12       11    RIGID        13    RIGID        3
+     13       12    RIGID        10    RIGID        3
+     14       12    RIGID        11    RIGID        3
+     15       13    RIGID        12    RIGID        3
+     16       10    RIGID        13    RIGID        3
+     17       11    RIGID        10    RIGID        3
+     18       16    RIGID        14    RIGID        3
+     19        9    RIGID         7    RIGID        3
+     20        8    RIGID         9    RIGID        3
+     21        7    RIGID         8    RIGID        3
+     22       15    RIGID        16    RIGID        3
+     23       14    RIGID        15    RIGID        3
+     24       17    RIGID        18    RIGID        3
+     25        6    RIGID         5    RIGID        3
+     26       20    RIGID        22    RIGID        3
+     27       20    RIGID        21    RIGID        3
+     28       19    RIGID        20    RIGID        3
+     29        3    RIGID         1    RIGID        3
+     30        3    RIGID         2    RIGID        3
+     31        4    RIGID         3    RIGID        3
+
+ TABLE  3 A:      Member's Processed Material Properties
+
+  Member  Member  Effective Column Lengths  Effective Bending
+  Number  Length    In-Plane   Perp-Plane       Length
+          (IN)       (IN)        (IN)           (IN)
+
+      1     76.865     N/A         N/A            N/A   
+      2     89.087     N/A         N/A            N/A   
+      3     79.418     N/A         N/A            N/A   
+      4     96.000     N/A         N/A            N/A   
+      5     79.418     N/A         N/A            N/A   
+      6     89.087     N/A         N/A            N/A   
+      7     76.865     N/A         N/A            N/A   
+      8     35.867     N/A         N/A            N/A   
+      9     77.125     N/A         N/A            N/A   
+     10     77.125     N/A         N/A            N/A   
+     11     35.867     N/A         N/A            N/A   
+     12      5.615     N/A         N/A            N/A   
+     13      5.615     N/A         N/A            N/A   
+     14      3.500     N/A         N/A            N/A   
+     15      4.103     N/A         N/A            N/A   
+     16      4.198     N/A         N/A            N/A   
+     17      4.103     N/A         N/A            N/A   
+     18      3.502     N/A         N/A            N/A   
+     19      3.502     N/A         N/A            N/A   
+     20      4.603     N/A         N/A            N/A   
+     21      4.493     N/A         N/A            N/A   
+     22      4.493     N/A         N/A            N/A   
+     23      4.603     N/A         N/A            N/A   
+     24      3.513     N/A         N/A            N/A   
+     25      3.513     N/A         N/A            N/A   
+     26      2.401     N/A         N/A            N/A   
+     27      1.750     N/A         N/A            N/A   
+     28      3.665     N/A         N/A            N/A   
+     29      2.401     N/A         N/A            N/A   
+     30      1.750     N/A         N/A            N/A   
+     31      3.665     N/A         N/A            N/A   
+
+ TABLE  4:        Reaction Conditions
+
+   Node   Reaction    Horizontal     Vertical
+    ID      Type     Displacement  Displacement
+
+      1     FIX           0.0000        0.0000
+     22     FIRL          1.0000        0.0000
+
+ ***** LOAD CASE:   1 ********************************************************
+
+ TABLE  5:        Loads
+
+  Stress Adjustment Factor:  1.00
+
+ TABLE  5 A:      Point Loads
+
+ ---------- NONE ----------
+
+ TABLE  5 B:      Uniform Loads
+
+  Member  Horizontal    Vertical
+  Number  Compression  Compression
+            (LBS)        (LBS)
+
+     1          0.000       -5.000
+     3          0.000       -5.000
+     5          0.000       -5.000
+     7          0.000       -5.000
+     2          0.000       -1.667
+     4          0.000       -1.667
+     6          0.000       -1.667
+     8          0.000       -0.083
+     9          0.000       -0.083
+    10          0.000       -0.083
+    11          0.000       -0.083
+
+ TABLE  5 C:      Nodal Loads
+
+ ---------- NONE ----------
+
+ TABLE  5 D:      Trapezoidal Loads
+
+ ---------- NONE ----------
+
+ *****************************************************************************
+ ********************************** RESULTS **********************************
+ *****************************************************************************
+
+ * * * * * * * * * * * * * * *  ACTION ANALYSIS  * * * * * * * * * * * * * * *
+
+ TABLE  6:        Reactions
+
+  Reaction         Horz. Comp.      Vert. Comp.        Moment
+    Node              (LBS)            (LBS)          (IN-LBS)
+
+       1                 0.000           932.863         4.9740E+02
+      22                -0.000           932.863        -4.9740E+02
+
+ TABLE  6 A:      Zero Check (Load - Reaction)
+
+                   Horz. Comp.      Vert. Comp.        Moment
+                      (LBS)            (LBS)          (IN-LBS)
+
+       Loads:           0.000         -1865.726        -2.6866E+05
+   Reactions:           0.000          1865.726         2.6866E+05
+  --------------------------------------------------------------------
+  Difference:           0.000             0.000         0.0000E+00
+
+ TABLE  7:        Member End Actions
+
+  Member    Location       Axial          Shear        Moment
+  Number                   (LBS)          (LBS)       (IN-LBS)
+
+      1 ---[ Neg End       1631.682        155.665       1757.552
+           [ Pos End      -1477.953        151.794      -1608.758
+
+      2 ---[ Neg End      -1389.805         63.921        135.567
+           [ Pos End       1389.805         84.587      -1056.082
+
+      3 ---[ Neg End       1430.684        174.684       1591.575
+           [ Pos End      -1271.847        142.985       -332.859
+
+      4 ---[ Neg End       -900.141         80.016        750.754
+           [ Pos End        900.141         80.016       -750.754
+
+      5 ---[ Neg End       1271.847        142.985        332.859
+           [ Pos End      -1430.684        174.684      -1591.575
+
+      6 ---[ Neg End      -1389.805         84.587       1056.082
+           [ Pos End       1389.805         63.921       -135.567
+
+      7 ---[ Neg End       1477.953        151.794       1608.758
+           [ Pos End      -1631.682        155.665      -1757.552
+
+      8 ---[ Neg End        331.206         -9.284       -263.480
+           [ Pos End       -329.787          8.244        -50.869
+
+      9 ---[ Neg End       -531.033         -3.196       -251.000
+           [ Pos End        534.038          5.294        -76.372
+
+     10 ---[ Neg End       -531.033          3.196        251.000
+           [ Pos End        534.038         -5.294         76.372
+
+     11 ---[ Neg End        331.206          9.284        263.480
+           [ Pos End       -329.787         -8.244         50.869
+
+     12 ---[ Neg End        -17.000         28.759        101.674
+   FICT    [ Pos End         17.000        -28.759         59.802
+
+     13 ---[ Neg End        -17.000        -28.759       -101.674
+   FICT    [ Pos End         17.000         28.759        -59.802
+
+     14 ---[ Neg End       1083.561         -0.000        -58.849
+   FICT    [ Pos End      -1083.561          0.000         58.849
+
+     15 ---[ Neg End       -416.575        -73.503       -129.235
+   FICT    [ Pos End        416.575         73.503       -172.337
+
+     16 ---[ Neg End       -201.989          0.000          6.939
+   FICT    [ Pos End        201.989         -0.000         -6.939
+
+     17 ---[ Neg End       -416.575         73.503        172.337
+   FICT    [ Pos End        416.575        -73.503        129.235
+
+     18 ---[ Neg End        -27.042        -49.178        -85.996
+   FICT    [ Pos End         27.042         49.178        -86.225
+
+     19 ---[ Neg End        -27.042         49.178         86.225
+   FICT    [ Pos End         27.042        -49.178         85.996
+
+     20 ---[ Neg End       -552.687         67.617        146.445
+   FICT    [ Pos End        552.687        -67.617        164.775
+
+     21 ---[ Neg End        380.044         74.868        177.484
+   FICT    [ Pos End       -380.044        -74.868        158.884
+
+     22 ---[ Neg End        380.044        -74.868       -158.884
+   FICT    [ Pos End       -380.044         74.868       -177.484
+
+     23 ---[ Neg End       -552.687        -67.617       -164.775
+   FICT    [ Pos End        552.687         67.617       -146.445
+
+     24 ---[ Neg End        329.320        -19.374        -50.869
+   FICT    [ Pos End       -329.320         19.374        -17.183
+
+     25 ---[ Neg End        329.320         19.374         50.869
+   FICT    [ Pos End       -329.320        -19.374         17.183
+
+     26 ---[ Neg End        728.444       -582.755       -901.891
+   FICT    [ Pos End       -728.444        582.755       -497.404
+
+     27 ---[ Neg End        155.248       1631.722       1097.875
+   FICT    [ Pos End       -155.248      -1631.722       1757.552
+
+     28 ---[ Neg End      -1391.177        -16.484        135.567
+   FICT    [ Pos End       1391.177         16.484       -195.984
+
+     29 ---[ Neg End        728.444        582.755        901.891
+   FICT    [ Pos End       -728.444       -582.755        497.404
+
+     30 ---[ Neg End        155.248      -1631.722      -1097.875
+   FICT    [ Pos End       -155.248       1631.722      -1757.552
+
+     31 ---[ Neg End      -1391.177         16.484       -135.567
+   FICT    [ Pos End       1391.177        -16.484        195.984
+
+ * * * * * * * * * * * * * * *  STRESS ANALYSIS  * * * * * * * * * * * * * * *
+
+ TABLE  8:        NDS-1991 Interaction Analysis
+                  Using Maximum Axial Force and Maximum Moment
+
+  Member  Prop  Notes     Max       Loc from Neg End     Bending    Axial
+  Number  Type            Int       Bend       Axial     Stress     Stress       L/D
+                          Val       (IN)       (IN)      (PSI)      (PSI)
+
+      1   TD               0.347      0.000      0.000   -573.895   -310.797     17.149
+      2   TD               0.395     39.198     89.087    355.709    264.725     59.391
+      3   TD               0.409     44.474      0.000    725.371   -272.511     17.474
+      4   TD               0.321     49.920     96.000    380.917    171.455     64.000
+      5   TD               0.409     34.944     79.418    725.371   -272.511     17.474
+      6   TD               0.395     49.889     89.087    355.709    264.725     59.391
+      7   TD               0.347     76.865     76.865   -573.895   -310.797     17.149
+      8   UI        P      0.101      0.000      0.000     86.034    -63.087     19.129
+      9   UI               0.298      0.000     77.125     81.959    101.721     41.133
+     10   UI               0.298      0.000     77.125    -81.959    101.721     41.133
+     11   UI        P      0.101      0.000      0.000    -86.034    -63.087     19.129
+     12     Fictitious Member: No Interaction Analysis performed!
+     13     Fictitious Member: No Interaction Analysis performed!
+     14     Fictitious Member: No Interaction Analysis performed!
+     15     Fictitious Member: No Interaction Analysis performed!
+     16     Fictitious Member: No Interaction Analysis performed!
+     17     Fictitious Member: No Interaction Analysis performed!
+     18     Fictitious Member: No Interaction Analysis performed!
+     19     Fictitious Member: No Interaction Analysis performed!
+     20     Fictitious Member: No Interaction Analysis performed!
+     21     Fictitious Member: No Interaction Analysis performed!
+     22     Fictitious Member: No Interaction Analysis performed!
+     23     Fictitious Member: No Interaction Analysis performed!
+     24     Fictitious Member: No Interaction Analysis performed!
+     25     Fictitious Member: No Interaction Analysis performed!
+     26     Fictitious Member: No Interaction Analysis performed!
+     27     Fictitious Member: No Interaction Analysis performed!
+     28     Fictitious Member: No Interaction Analysis performed!
+     29     Fictitious Member: No Interaction Analysis performed!
+     30     Fictitious Member: No Interaction Analysis performed!
+     31     Fictitious Member: No Interaction Analysis performed!
+
+     P  Interaction value critical for Perpendicular Plane!
+
+ TABLE  8 A:      Member Force Analysis Data
+
+                         Final Adjusted Stresses              Effective Lengths
+                     --------------------------------  --------------------------------
+                                              FBend
+  Member     Length     FAxial     FBend      Prime     In-Plane  Perp-Plane  Bending
+  Number      (in)      (PSI)      (PSI)      (PSI)       L/D        L/D       Length
+
+      1       76.865  -1372.659   2300.000   2300.000      17.149      0.000      0.000
+      2       89.087   1100.000   2300.000   2300.000      25.453     59.391      0.000
+      3       79.418  -1347.840   2300.000   2300.000      17.474      0.000      0.000
+      4       96.000   1100.000   2300.000   2300.000      27.429     64.000      0.000
+      5       79.418  -1347.840   2300.000   2300.000      17.474      0.000      0.000
+      6       89.087   1100.000   2300.000   2300.000      25.453     59.391      0.000
+      7       76.865  -1372.659   2300.000   2300.000      17.149      0.000      0.000
+      8       35.867   -725.598    980.000    970.086       8.198     19.129     68.963
+      9       77.125    475.000    980.000    954.984      17.629     41.133    141.910
+     10       77.125    475.000    980.000    954.984      17.629     41.133    141.910
+     11       35.867   -725.598    980.000    970.086       8.198     19.129     68.963
+     12     Fictitious Member: No Member Force Analysis performed!
+     13     Fictitious Member: No Member Force Analysis performed!
+     14     Fictitious Member: No Member Force Analysis performed!
+     15     Fictitious Member: No Member Force Analysis performed!
+     16     Fictitious Member: No Member Force Analysis performed!
+     17     Fictitious Member: No Member Force Analysis performed!
+     18     Fictitious Member: No Member Force Analysis performed!
+     19     Fictitious Member: No Member Force Analysis performed!
+     20     Fictitious Member: No Member Force Analysis performed!
+     21     Fictitious Member: No Member Force Analysis performed!
+     22     Fictitious Member: No Member Force Analysis performed!
+     23     Fictitious Member: No Member Force Analysis performed!
+     24     Fictitious Member: No Member Force Analysis performed!
+     25     Fictitious Member: No Member Force Analysis performed!
+     26     Fictitious Member: No Member Force Analysis performed!
+     27     Fictitious Member: No Member Force Analysis performed!
+     28     Fictitious Member: No Member Force Analysis performed!
+     29     Fictitious Member: No Member Force Analysis performed!
+     30     Fictitious Member: No Member Force Analysis performed!
+     31     Fictitious Member: No Member Force Analysis performed!
+
+ TABLE  9:        Shear Stress Analysis
+
+               Max. Shear      Location from       Member
+  Member         Stress          Neg. End          Length
+  Number         (PSI)             (in)             (in)
+
+      1           44.476            0.000           76.865
+      2          -24.168           89.087           89.087
+      3           49.910            0.000           79.418
+      4           22.862            0.000           96.000
+      5          -49.910           79.418           79.418
+      6           24.168            0.000           89.087
+      7          -44.476           76.865           76.865
+      8           -2.653            0.000           35.867
+      9           -1.512           77.125           77.125
+     10            1.512           77.125           77.125
+     11            2.653            0.000           35.867
+     12     Fictitious Member: No Shear Stress Analysis performed!
+     13     Fictitious Member: No Shear Stress Analysis performed!
+     14     Fictitious Member: No Shear Stress Analysis performed!
+     15     Fictitious Member: No Shear Stress Analysis performed!
+     16     Fictitious Member: No Shear Stress Analysis performed!
+     17     Fictitious Member: No Shear Stress Analysis performed!
+     18     Fictitious Member: No Shear Stress Analysis performed!
+     19     Fictitious Member: No Shear Stress Analysis performed!
+     20     Fictitious Member: No Shear Stress Analysis performed!
+     21     Fictitious Member: No Shear Stress Analysis performed!
+     22     Fictitious Member: No Shear Stress Analysis performed!
+     23     Fictitious Member: No Shear Stress Analysis performed!
+     24     Fictitious Member: No Shear Stress Analysis performed!
+     25     Fictitious Member: No Shear Stress Analysis performed!
+     26     Fictitious Member: No Shear Stress Analysis performed!
+     27     Fictitious Member: No Shear Stress Analysis performed!
+     28     Fictitious Member: No Shear Stress Analysis performed!
+     29     Fictitious Member: No Shear Stress Analysis performed!
+     30     Fictitious Member: No Shear Stress Analysis performed!
+     31     Fictitious Member: No Shear Stress Analysis performed!
+
+ * * * * * * * * * * * * * *  DEFLECTION ANALYSIS * * * * * * * * * * * * * * 
+
+ TABLE 10:        Maximum Member Deflections
+
+              Maximum       Location from     Member
+  Member     Deflection     Negative End      Length
+  Number        (in)            (in)           (in)
+
+      1        -0.3730         76.8648        76.8648
+      2        -0.3741         89.0870        89.0870
+      3        -0.4925         38.1204        79.4175
+      4        -0.4813         49.9200        96.0000
+      5        -0.4517         41.2971        79.4175
+      6        -0.3741          0.0000        89.0870
+      7        -0.3322          0.0000        76.8648
+      8         0.1582         35.8668        35.8668
+      9        -0.2854          3.0850        77.1248
+     10         0.2106          3.0850        77.1248
+     11        -0.2318         35.8668        35.8668
+     12     Fictitious Member: No Member Deflection Analysis performed!
+     13     Fictitious Member: No Member Deflection Analysis performed!
+     14     Fictitious Member: No Member Deflection Analysis performed!
+     15     Fictitious Member: No Member Deflection Analysis performed!
+     16     Fictitious Member: No Member Deflection Analysis performed!
+     17     Fictitious Member: No Member Deflection Analysis performed!
+     18     Fictitious Member: No Member Deflection Analysis performed!
+     19     Fictitious Member: No Member Deflection Analysis performed!
+     20     Fictitious Member: No Member Deflection Analysis performed!
+     21     Fictitious Member: No Member Deflection Analysis performed!
+     22     Fictitious Member: No Member Deflection Analysis performed!
+     23     Fictitious Member: No Member Deflection Analysis performed!
+     24     Fictitious Member: No Member Deflection Analysis performed!
+     25     Fictitious Member: No Member Deflection Analysis performed!
+     26     Fictitious Member: No Member Deflection Analysis performed!
+     27     Fictitious Member: No Member Deflection Analysis performed!
+     28     Fictitious Member: No Member Deflection Analysis performed!
+     29     Fictitious Member: No Member Deflection Analysis performed!
+     30     Fictitious Member: No Member Deflection Analysis performed!
+     31     Fictitious Member: No Member Deflection Analysis performed!
+
+ TABLE 11:        Node Displacements
+
+          Horiz. Displacement   Vertical            Rotational
+   Node   or Roller Direction  Displacement        Displacement
+  Number      (inches)          (inches)      (radians)     (degrees)
+
+      1       0.000000          0.000000     0.0000E+00     0  0'  0.000"
+      2      -0.061664         -0.042550    -5.8146E-03     0 19' 59.339"
+      3      -0.001354         -0.010768     3.0833E-02     1 45' 59.774"
+      4       0.026904          0.026308    -7.7440E-03     0 26' 37.320"
+      5       0.088467         -0.372754    -3.3996E-03     0 11' 41.225"
+      6       0.076924         -0.372637     3.5664E-04     0  1' 13.562"
+      7       0.083438         -0.365864    -1.3667E-04     0  0' 28.189"
+      8       0.040777         -0.374096    -2.7896E-03     0  9' 35.402"
+      9       0.084333         -0.377449    -1.1127E-04     0  0' 22.952"
+     10       0.043375         -0.342038     9.2482E-04     0  3' 10.757"
+     11       0.055651         -0.334010     6.5388E-03     0 22' 28.716"
+     12       0.035585         -0.334010    -6.5388E-03     0 22' 28.716"
+     13       0.047861         -0.342038    -9.2482E-04     0  3' 10.757"
+     14       0.006903         -0.377449     1.1127E-04     0  0' 22.952"
+     15       0.050459         -0.374096     2.7896E-03     0  9' 35.402"
+     16       0.007798         -0.365864     1.3667E-04     0  0' 28.189"
+     17       0.014312         -0.372637    -3.5664E-04     0  1' 13.562"
+     18       0.002770         -0.372754     3.3996E-03     0 11' 41.225"
+     19       0.064332          0.026308     7.7440E-03     0 26' 37.320"
+     20       0.092591         -0.010768    -3.0833E-02    -1 45' 59.774"
+     21       0.152901         -0.042550     5.8146E-03     0 19' 59.339"
+     22       0.091236          0.000000     0.0000E+00     0  0'  0.000"
+

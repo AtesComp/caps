@@ -1,0 +1,769 @@
+
+     ************************************************************************
+     ***     PROGRAM: CAPS                                                ***
+     ***     Comprehensive Analyzer of Plane Structures                   ***
+     ***          Version  1.05  Release 10/25/2020                       ***
+     ***          COPYRIGHT (2020)                                        ***
+     ***                                                                  ***
+     ***     This program is intended to facilitate the analysis of       ***
+     ***     wood structures.  It creates a structural response           ***
+     ***     report from the input analog.  Accuracy of the analog        ***
+     ***     and interpretation of the structural adequacy are the        ***
+     ***     responsibility of the user.  The author assumes no           ***
+     ***     responsibility, explicit or implied.                         ***
+     ***                                                                  ***
+     ************************************************************************
+
+ ================================================================================
+
+ STRUCTURE   1
+ --------------------
+ Format: FREE
+     ID: 52'-0" 4/12 COMN 35# @ 48"
+ --------------------------------------------------------------------------------
+ Nodes .............. 31
+ Members ............ 56
+ Roller Supports .... 1
+ Pinned Supports .... 1
+ FIRL   Supports .... 0
+ Fixed  Supports .... 0
+ Report Input ....... True
+ Report Results ..... All Tables
+ Load Cases ......... 1
+ Member Divisions ... 24 + start + end
+
+ ================================================================================
+
+ TABLE  1:        Material Properties
+
+              Allowable Material Stresses in PSI
+                @ Normal Load Duration (100%)
+
+  Group  Use      Allowable                     Modulus of    Shear
+    ID   Type  Bend  Comp  Tens   Width  Depth  Elasticity    Modulus
+
+     1   MU     2400  1975  1925  1.500  5.500   2.0000E+06  1.0417E+05
+     2   UI     1500  1650   825  1.500  3.500   1.6000E+06  8.3333E+04
+     3   FICT   9000     0     0  1.500  1.500   1.5000E+06  7.8125E+04
+     4   FICT   9000     0     0  1.000  3.000   3.5000E+06  1.8229E+05
+     5   FICT   9000     0     0  0.120  1.000   2.9000E+07  1.5104E+06
+
+ TABLE  2:        Node Coordinates
+
+   Node    (X-Coordinate  Y-Coordinate)
+    ID     (   inches   ,    inches   )
+
+     1     (      0.0000,       5.9100)
+     2     (      0.0000,       0.7500)
+     3     (      1.7500,       6.3500)
+     4     (      1.7500,       0.7500)
+     5     (     17.1800,       8.1500)
+     6     (     17.1800,       2.7500)
+     7     (     91.4500,      26.7100)
+     8     (    102.7500,       2.7500)
+     9     (    103.7800,      29.8000)
+    10     (    165.8500,      45.3100)
+    11     (    186.1700,       2.7500)
+    12     (    204.0000,       2.7500)
+    13     (    237.7800,      63.3000)
+    14     (    269.9900,       2.7500)
+    15     (    311.0000,      81.6000)
+    16     (    312.0000,      79.8700)
+    17     (    313.0000,      81.6000)
+    18     (    354.0100,       2.7500)
+    19     (    386.2200,      63.3000)
+    20     (    420.0000,       2.7500)
+    21     (    437.8300,       2.7500)
+    22     (    458.1500,      45.3100)
+    23     (    520.2200,      29.8000)
+    24     (    521.2500,       2.7500)
+    25     (    532.5500,      26.7100)
+    26     (    606.8200,       8.1500)
+    27     (    606.8200,       2.7500)
+    28     (    622.2500,       6.3500)
+    29     (    622.2500,       0.7500)
+    30     (    624.0000,       5.9100)
+    31     (    624.0000,       0.7500)
+
+ TABLE  3:        Member Layout
+
+  Member     Negative End      Positive End     Group
+    ID      Node  Condition   Node  Condition     ID
+
+      1        5    RIGID         7    RIGID        1
+      2        7    RIGID         9    RIGID        1
+      3        9    RIGID        10    RIGID        1
+      4       10    RIGID        13    RIGID        1
+      5       13    RIGID        15    RIGID        1
+      6       17    RIGID        19    RIGID        1
+      7       19    RIGID        22    RIGID        1
+      8       22    RIGID        23    RIGID        1
+      9       23    RIGID        25    RIGID        1
+     10       25    RIGID        26    RIGID        1
+     11        6    RIGID         8    RIGID        1
+     12        8    RIGID        11    RIGID        1
+     13       11    RIGID        12    RIGID        1
+     14       12    RIGID        14    RIGID        1
+     15       14    RIGID        18    RIGID        1
+     16       18    RIGID        20    RIGID        1
+     17       20    RIGID        21    RIGID        1
+     18       21    RIGID        24    RIGID        1
+     19       24    RIGID        27    RIGID        1
+     20        7    PINNED        8    PINNED       2
+     21        8    PINNED       10    PINNED       2
+     22       10    PINNED       11    PINNED       2
+     23       11    PINNED       13    PINNED       2
+     24       13    PINNED       14    PINNED       2
+     25       14    PINNED       16    PINNED       2
+     26       16    PINNED       18    PINNED       2
+     27       18    PINNED       19    PINNED       2
+     28       19    PINNED       21    PINNED       2
+     29       21    PINNED       22    PINNED       2
+     30       22    PINNED       24    PINNED       2
+     31       24    PINNED       25    PINNED       2
+     32        2    RIGID         1    RIGID        3
+     33        1    RIGID         3    RIGID        3
+     34        2    RIGID         4    RIGID        3
+     35        1    RIGID         4    RIGID        3
+     36        2    RIGID         3    RIGID        3
+     37        4    RIGID         3    RIGID        3
+     38        6    RIGID         5    RIGID        3
+     39        3    RIGID         5    RIGID        3
+     40        4    RIGID         6    RIGID        3
+     41        3    RIGID         6    RIGID        4
+     42        4    RIGID         5    RIGID        4
+     43       15    RIGID        17    RIGID        5
+     44       15    RIGID        16    RIGID        5
+     45       16    RIGID        17    RIGID        5
+     46       27    RIGID        26    RIGID        3
+     47       29    RIGID        28    RIGID        3
+     48       26    RIGID        28    RIGID        3
+     49       27    RIGID        29    RIGID        3
+     50       26    RIGID        29    RIGID        4
+     51       27    RIGID        28    RIGID        4
+     52       28    RIGID        30    RIGID        3
+     53       29    RIGID        31    RIGID        3
+     54       31    RIGID        30    RIGID        3
+     55       28    RIGID        31    RIGID        3
+     56       29    RIGID        30    RIGID        3
+
+ TABLE  3 A:      Member's Processed Material Properties
+
+  Member  Member  Effective Column Lengths  Effective Bending
+  Number  Length    In-Plane   Perp-Plane       Length
+          (IN)       (IN)        (IN)           (IN)
+
+      1     76.554     N/A         24.000         N/A   
+      2     12.711     N/A         24.000         N/A   
+      3     63.978     N/A         24.000         N/A   
+      4     74.146     N/A         24.000         N/A   
+      5     75.472     N/A         24.000         N/A   
+      6     75.472     N/A         24.000         N/A   
+      7     74.146     N/A         24.000         N/A   
+      8     63.978     N/A         24.000         N/A   
+      9     12.711     N/A         24.000         N/A   
+     10     76.554     N/A         24.000         N/A   
+     11     85.570     N/A        120.000         N/A   
+     12     83.420     N/A        120.000         N/A   
+     13     17.830     N/A        120.000         N/A   
+     14     65.990     N/A        120.000         N/A   
+     15     84.020     N/A        120.000         N/A   
+     16     65.990     N/A        120.000         N/A   
+     17     17.830     N/A        120.000         N/A   
+     18     83.420     N/A        120.000         N/A   
+     19     85.570     N/A        120.000         N/A   
+     20     26.491     N/A         N/A            N/A   
+     21     76.112     N/A         N/A            N/A   
+     22     47.162     N/A         N/A            N/A   
+     23     79.561     N/A         N/A            N/A   
+     24     68.584     N/A         N/A            N/A   
+     25     87.820     N/A         N/A            N/A   
+     26     87.820     N/A         N/A            N/A   
+     27     68.584     N/A         N/A            N/A   
+     28     79.561     N/A         N/A            N/A   
+     29     47.162     N/A         N/A            N/A   
+     30     76.112     N/A         N/A            N/A   
+     31     26.491     N/A         N/A            N/A   
+     32      5.160     N/A         N/A            N/A   
+     33      1.804     N/A         N/A            N/A   
+     34      1.750     N/A         N/A            N/A   
+     35      5.449     N/A         N/A            N/A   
+     36      5.867     N/A         N/A            N/A   
+     37      5.600     N/A         N/A            N/A   
+     38      5.400     N/A         N/A            N/A   
+     39     15.535     N/A         N/A            N/A   
+     40     15.559     N/A         N/A            N/A   
+     41     15.844     N/A         N/A            N/A   
+     42     17.113     N/A         N/A            N/A   
+     43      2.000     N/A         N/A            N/A   
+     44      1.998     N/A         N/A            N/A   
+     45      1.998     N/A         N/A            N/A   
+     46      5.400     N/A         N/A            N/A   
+     47      5.600     N/A         N/A            N/A   
+     48     15.535     N/A         N/A            N/A   
+     49     15.559     N/A         N/A            N/A   
+     50     17.113     N/A         N/A            N/A   
+     51     15.844     N/A         N/A            N/A   
+     52      1.804     N/A         N/A            N/A   
+     53      1.750     N/A         N/A            N/A   
+     54      5.160     N/A         N/A            N/A   
+     55      5.867     N/A         N/A            N/A   
+     56      5.449     N/A         N/A            N/A   
+
+ TABLE  4:        Reaction Conditions
+
+   Node   Reaction    Horizontal     Vertical
+    ID      Type     Displacement  Displacement
+
+      4     PIN           0.0000        0.0000
+     29     ROLL          1.0000        0.0000
+
+ ***** LOAD CASE:   1 ********************************************************
+
+ TABLE  5:        Loads
+
+  Stress Adjustment Factor:  1.15
+
+ TABLE  5 A:      Point Loads
+
+ ---------- NONE ----------
+
+ TABLE  5 B:      Uniform Loads
+
+  Member  Horizontal    Vertical
+  Number  Compression  Compression
+            (LBS)        (LBS)
+
+     1          0.000      -10.000
+     2          0.000      -10.000
+     3          0.000      -10.000
+     4          0.000      -10.000
+     5          0.000      -10.000
+     6          0.000      -10.000
+     7          0.000      -10.000
+     8          0.000      -10.000
+     9          0.000      -10.000
+    10          0.000      -10.000
+    11          0.000       -1.667
+    12          0.000       -1.667
+    13          0.000       -1.667
+    14          0.000       -1.667
+    15          0.000       -1.667
+    16          0.000       -1.667
+    17          0.000       -1.667
+    18          0.000       -1.667
+    19          0.000       -1.667
+    33          0.000      -10.000
+    34          0.000       -1.667
+    39          0.000      -10.000
+    40          0.000       -1.667
+    43          0.000      -10.000
+    48          0.000      -10.000
+    49          0.000       -1.667
+    52          0.000      -10.000
+    53          0.000       -1.667
+
+ TABLE  5 C:      Nodal Loads
+
+ ---------- NONE ----------
+
+ TABLE  5 D:      Trapezoidal Loads
+
+ ---------- NONE ----------
+
+ *****************************************************************************
+ ********************************** RESULTS **********************************
+ *****************************************************************************
+
+ * * * * * * * * * * * * * * *  ACTION ANALYSIS  * * * * * * * * * * * * * * *
+
+ TABLE  6:        Reactions
+
+  Reaction         Horz. Comp.      Vert. Comp.        Moment
+    Node              (LBS)            (LBS)          (IN-LBS)
+
+       4                 0.000          3640.104        -1.9668E-11
+      29                 0.000          3640.104        -8.4128E-12
+
+ TABLE  6 A:      Zero Check (Load - Reaction)
+
+                   Horz. Comp.      Vert. Comp.        Moment
+                      (LBS)            (LBS)          (IN-LBS)
+
+       Loads:           0.000         -7280.208        -2.2714E+06
+   Reactions:           0.000          7280.208         2.2714E+06
+  --------------------------------------------------------------------
+  Difference:           0.000             0.000         0.0000E+00
+
+ TABLE  7:        Member End Actions
+
+  Member    Location       Axial          Shear        Moment
+  Number                   (LBS)          (LBS)       (IN-LBS)
+
+      1 ---[ Neg End      11779.529        442.289       4537.568
+           [ Pos End     -11599.466        278.253       1741.205
+
+      2 ---[ Neg End      11487.584        279.112      -1741.205
+           [ Pos End     -11457.611       -159.510       4528.934
+
+      3 ---[ Neg End      11457.499        167.372      -4528.934
+           [ Pos End     -11307.026        434.813      -4026.292
+
+      4 ---[ Neg End      10224.820        351.195       4026.292
+           [ Pos End     -10050.296        346.611      -3856.358
+
+      5 ---[ Neg End       8327.997        387.966       3856.358
+           [ Pos End      -8150.458        322.384      -1381.535
+
+      6 ---[ Neg End       8150.458        322.384       1381.535
+           [ Pos End      -8327.997        387.966      -3856.358
+
+      7 ---[ Neg End      10050.296        346.611       3856.358
+           [ Pos End     -10224.820        351.195      -4026.292
+
+      8 ---[ Neg End      11307.026        434.813       4026.292
+           [ Pos End     -11457.499        167.372       4528.934
+
+      9 ---[ Neg End      11457.611       -159.510      -4528.934
+           [ Pos End     -11487.584        279.112       1741.205
+
+     10 ---[ Neg End      11599.466        278.253      -1741.205
+           [ Pos End     -11779.529        442.289      -4537.568
+
+     11 ---[ Neg End     -11320.863        154.703       2150.060
+           [ Pos End      11320.863        -12.057       4984.762
+
+     12 ---[ Neg End     -10317.786          1.882      -4984.762
+           [ Pos End      10317.786        137.179       -658.502
+
+     13 ---[ Neg End      -8791.919         72.386        658.502
+           [ Pos End       8791.919        -42.663        367.156
+
+     14 ---[ Neg End      -8791.919         42.663       -367.156
+           [ Pos End       8791.919         67.342       -447.141
+
+     15 ---[ Neg End      -7084.679         70.031        447.141
+           [ Pos End       7084.679         70.031       -447.141
+
+     16 ---[ Neg End      -8791.919         67.342        447.141
+           [ Pos End       8791.919         42.663        367.156
+
+     17 ---[ Neg End      -8791.919        -42.663       -367.156
+           [ Pos End       8791.919         72.386       -658.502
+
+     18 ---[ Neg End     -10317.786        137.179        658.502
+           [ Pos End      10317.786          1.882       4984.762
+
+     19 ---[ Neg End     -11320.863        -12.057      -4984.762
+           [ Pos End      11320.863        154.703      -2150.060
+
+     20 ---[ Neg End        576.040          0.000          0.000
+           [ Pos End       -576.040          0.000          0.000
+
+     21 ---[ Neg End       -913.533          0.000          0.000
+           [ Pos End        913.533          0.000          0.000
+
+     22 ---[ Neg End       1122.668          0.000          0.000
+           [ Pos End      -1122.668          0.000          0.000
+
+     23 ---[ Neg End      -1606.566          0.000          0.000
+           [ Pos End       1606.566          0.000          0.000
+
+     24 ---[ Neg End       1717.302          0.000          0.000
+           [ Pos End      -1717.302          0.000          0.000
+
+     25 ---[ Neg End      -1882.918          0.000          0.000
+           [ Pos End       1882.918          0.000          0.000
+
+     26 ---[ Neg End      -1882.918          0.000          0.000
+           [ Pos End       1882.918          0.000          0.000
+
+     27 ---[ Neg End       1717.302          0.000          0.000
+           [ Pos End      -1717.302          0.000          0.000
+
+     28 ---[ Neg End      -1606.566          0.000          0.000
+           [ Pos End       1606.566          0.000          0.000
+
+     29 ---[ Neg End       1122.668          0.000          0.000
+           [ Pos End      -1122.668          0.000          0.000
+
+     30 ---[ Neg End       -913.533          0.000          0.000
+           [ Pos End        913.533          0.000          0.000
+
+     31 ---[ Neg End        576.040          0.000          0.000
+           [ Pos End       -576.040          0.000          0.000
+
+     32 ---[ Neg End       -358.809         48.324        163.713
+   FICT    [ Pos End        358.809        -48.324         85.637
+
+     33 ---[ Neg End       -288.714        272.637       -190.973
+   FICT    [ Pos End        292.982       -255.665        667.626
+
+     34 ---[ Neg End         72.461         52.445       -400.881
+   FICT    [ Pos End        -72.461        -49.527        490.106
+
+     35 ---[ Neg End        619.290        104.806        105.337
+   FICT    [ Pos End       -619.290       -104.806        465.716
+
+     36 ---[ Neg End        285.220        114.419        237.167
+   FICT    [ Pos End       -285.220       -114.419        434.139
+
+     37 ---[ Neg End       1359.938        179.910        539.914
+   FICT    [ Pos End      -1359.938       -179.910        467.580
+
+     38 ---[ Neg End        393.989       -696.640      -1724.087
+   FICT    [ Pos End       -393.989        696.640      -2037.768
+
+     39 ---[ Neg End       5175.991         43.722        -47.075
+   FICT    [ Pos End      -5158.112        109.538       -464.137
+
+     40 ---[ Neg End      -4977.042         14.655         16.554
+   FICT    [ Pos End       4980.348         10.854         13.018
+
+     41 ---[ Neg End      -5810.430       -123.783      -1522.270
+   FICT    [ Pos End       5810.430        123.783       -438.991
+
+     42 ---[ Neg End       5987.239       -207.329      -1512.290
+   FICT    [ Pos End      -5987.239        207.329      -2035.662
+
+     43 ---[ Neg End       8458.375         10.000        643.524
+   FICT    [ Pos End      -8458.375         10.000       -643.524
+
+     44 ---[ Neg End      -1668.250        418.002        738.011
+   FICT    [ Pos End       1668.250       -418.002         97.251
+
+     45 ---[ Neg End      -1668.250       -418.002        -97.251
+   FICT    [ Pos End       1668.250        418.002       -738.011
+
+     46 ---[ Neg End        393.989        696.640       1724.087
+   FICT    [ Pos End       -393.989       -696.640       2037.768
+
+     47 ---[ Neg End       1359.938       -179.910       -539.914
+   FICT    [ Pos End      -1359.938        179.910       -467.580
+
+     48 ---[ Neg End       5158.112        109.538        464.137
+   FICT    [ Pos End      -5175.991         43.722         47.075
+
+     49 ---[ Neg End      -4980.348         10.854        -13.018
+   FICT    [ Pos End       4977.042         14.655        -16.554
+
+     50 ---[ Neg End       5987.239        207.329       2035.662
+   FICT    [ Pos End      -5987.239       -207.329       1512.290
+
+     51 ---[ Neg End      -5810.430        123.783        438.991
+   FICT    [ Pos End       5810.430       -123.783       1522.270
+
+     52 ---[ Neg End       -292.982       -255.665       -667.626
+   FICT    [ Pos End        288.714        272.637        190.973
+
+     53 ---[ Neg End         72.461        -49.527       -490.106
+   FICT    [ Pos End        -72.461         52.445        400.881
+
+     54 ---[ Neg End       -358.809        -48.324       -163.713
+   FICT    [ Pos End        358.809         48.324        -85.637
+
+     55 ---[ Neg End        285.220       -114.419       -434.139
+   FICT    [ Pos End       -285.220        114.419       -237.167
+
+     56 ---[ Neg End        619.290       -104.806       -465.716
+   FICT    [ Pos End       -619.290        104.806       -105.337
+
+ * * * * * * * * * * * * * * *  STRESS ANALYSIS  * * * * * * * * * * * * * * *
+
+ TABLE  8:        NDS-1991 Interaction Analysis
+                  TPI Interaction: Truss with Uniform and Nodal Loads
+
+  Member  Prop  Notes     Max       Loc from Neg End     Bending    Axial
+  Number  Type            Int       Bend       Axial     Stress     Stress       L/D
+                          Val       (IN)       (IN)      (PSI)      (PSI)
+
+      1   MU        P      1.159     46.991     46.991    774.110  -1414.424     16.000
+      2   MU        P      0.866      6.356      6.356    439.683  -1390.618     16.000
+      3   MU        P      1.121     17.782     17.782    795.644  -1383.718     16.000
+      4   MU        P      0.673     37.316     37.316    334.064  -1228.725     16.000
+      5   MU        P      0.620     41.220     41.220    547.390   -997.701     16.000
+      6   MU        P      0.620     34.252     34.252    547.390   -997.701     16.000
+      7   MU        P      0.673     36.829     36.829    334.064  -1228.725     16.000
+      8   MU        P      1.121     46.196     46.196    795.644  -1383.718     16.000
+      9   MU        P      0.866      6.356      6.356    439.683  -1390.618     16.000
+     10   MU        P      1.159     29.563     29.563    774.110  -1414.424     16.000
+     11   MU               0.859     85.570     85.570    659.142   1372.226     80.000
+     12   MU               0.804      0.000      0.000    659.142   1250.641     80.000
+     13   MU               0.513      0.000      0.000    -87.075   1065.687     80.000
+     14   MU               0.525     26.396     26.396    120.667   1065.687     80.000
+     15   MU               0.437     40.330     40.330    135.074    858.749     80.000
+     16   MU               0.525     39.594     39.594    120.667   1065.687     80.000
+     17   MU               0.513     17.830     17.830    -87.075   1065.687     80.000
+     18   MU               0.804     83.420     83.420    659.142   1250.641     80.000
+     19   MU               0.859      0.000      0.000    659.142   1372.226     80.000
+     20   UI        P      0.075     13.245     13.245      0.000   -109.722     14.129
+     21   UI               0.183     76.112     76.112      0.000    174.006     40.593
+     22   UI        P      0.313     23.581     23.581      0.000   -213.842     25.153
+     23   UI               0.323     79.561     79.561      0.000    306.013     42.432
+     24   UI        P      0.952     34.292     34.292      0.000   -327.105     36.578
+     25   UI               0.378     87.820     87.820      0.000    358.651     46.837
+     26   UI               0.378     87.820     87.820      0.000    358.651     46.837
+     27   UI        P      0.952     34.292     34.292      0.000   -327.105     36.578
+     28   UI               0.323     79.561     79.561      0.000    306.013     42.432
+     29   UI        P      0.313     23.581     23.581      0.000   -213.842     25.153
+     30   UI               0.183     76.112     76.112      0.000    174.006     40.593
+     31   UI        P      0.075     13.245     13.245      0.000   -109.722     14.129
+     32     Fictitious Member: No Interaction Analysis performed!
+     33     Fictitious Member: No Interaction Analysis performed!
+     34     Fictitious Member: No Interaction Analysis performed!
+     35     Fictitious Member: No Interaction Analysis performed!
+     36     Fictitious Member: No Interaction Analysis performed!
+     37     Fictitious Member: No Interaction Analysis performed!
+     38     Fictitious Member: No Interaction Analysis performed!
+     39     Fictitious Member: No Interaction Analysis performed!
+     40     Fictitious Member: No Interaction Analysis performed!
+     41     Fictitious Member: No Interaction Analysis performed!
+     42     Fictitious Member: No Interaction Analysis performed!
+     43     Fictitious Member: No Interaction Analysis performed!
+     44     Fictitious Member: No Interaction Analysis performed!
+     45     Fictitious Member: No Interaction Analysis performed!
+     46     Fictitious Member: No Interaction Analysis performed!
+     47     Fictitious Member: No Interaction Analysis performed!
+     48     Fictitious Member: No Interaction Analysis performed!
+     49     Fictitious Member: No Interaction Analysis performed!
+     50     Fictitious Member: No Interaction Analysis performed!
+     51     Fictitious Member: No Interaction Analysis performed!
+     52     Fictitious Member: No Interaction Analysis performed!
+     53     Fictitious Member: No Interaction Analysis performed!
+     54     Fictitious Member: No Interaction Analysis performed!
+     55     Fictitious Member: No Interaction Analysis performed!
+     56     Fictitious Member: No Interaction Analysis performed!
+
+     P  Interaction value critical for Perpendicular Plane!
+
+ TABLE  8 A:      Member Force Analysis Data
+
+                         Final Adjusted Stresses              Effective Lengths
+                     --------------------------------  --------------------------------
+                                              FBend
+  Member     Length     FAxial     FBend      Prime     In-Plane  Perp-Plane  Bending
+  Number      (in)      (PSI)      (PSI)      (PSI)       L/D        L/D       Length
+
+      1       76.554  -1816.141   2760.000   2470.891       8.667     16.000    141.283
+      2       12.711  -1816.141   2760.000   2737.009       1.772     16.000     26.185
+      3       63.978  -1816.141   2760.000   2552.790       7.286     16.000    120.785
+      4       74.146  -1816.141   2760.000   2488.274       8.795     16.000    137.357
+      5       75.472  -1816.141   2760.000   2478.800      10.200     16.000    139.520
+      6       75.472  -1816.141   2760.000   2478.800      10.200     16.000    139.520
+      7       74.146  -1816.141   2760.000   2488.274       8.795     16.000    137.357
+      8       63.978  -1816.141   2760.000   2552.790       7.286     16.000    120.785
+      9       12.711  -1816.141   2760.000   2737.009       1.772     16.000     26.185
+     10       76.554  -1816.141   2760.000   2470.891       8.667     16.000    141.283
+     11       85.570   2213.750   2760.000   2390.738      15.558     80.000    157.449
+     12       83.420   2213.750   2760.000   2411.596      15.167     80.000    153.493
+     13       17.830   2213.750   2760.000   2725.731       3.242     80.000     36.730
+     14       65.990   2213.750   2760.000   2541.128      11.998     80.000    124.064
+     15       84.020   2213.750   2760.000   2405.853      15.276     80.000    154.597
+     16       65.990   2213.750   2760.000   2541.128      11.998     80.000    124.064
+     17       17.830   2213.750   2760.000   2725.731       3.242     80.000     36.730
+     18       83.420   2213.750   2760.000   2411.596      15.167     80.000    153.493
+     19       85.570   2213.750   2760.000   2390.738      15.558     80.000    157.449
+     20       26.491  -1453.383   1725.000   1703.314       6.055     14.129     53.680
+     21       76.112    948.750   1725.000   1639.758      17.397     40.593    140.045
+     22       47.162   -682.115   1725.000   1684.154      10.780     25.153     87.374
+     23       79.561    948.750   1725.000   1632.739      18.185     42.432    146.392
+     24       68.584   -343.562   1725.000   1653.651      15.676     36.578    126.195
+     25       87.820    948.750   1725.000   1614.047      20.073     46.837    161.589
+     26       87.820    948.750   1725.000   1614.047      20.073     46.837    161.589
+     27       68.584   -343.562   1725.000   1653.651      15.676     36.578    126.195
+     28       79.561    948.750   1725.000   1632.739      18.185     42.432    146.392
+     29       47.162   -682.115   1725.000   1684.154      10.780     25.153     87.374
+     30       76.112    948.750   1725.000   1639.758      17.397     40.593    140.045
+     31       26.491  -1453.383   1725.000   1703.314       6.055     14.129     53.680
+     32     Fictitious Member: No Member Force Analysis performed!
+     33     Fictitious Member: No Member Force Analysis performed!
+     34     Fictitious Member: No Member Force Analysis performed!
+     35     Fictitious Member: No Member Force Analysis performed!
+     36     Fictitious Member: No Member Force Analysis performed!
+     37     Fictitious Member: No Member Force Analysis performed!
+     38     Fictitious Member: No Member Force Analysis performed!
+     39     Fictitious Member: No Member Force Analysis performed!
+     40     Fictitious Member: No Member Force Analysis performed!
+     41     Fictitious Member: No Member Force Analysis performed!
+     42     Fictitious Member: No Member Force Analysis performed!
+     43     Fictitious Member: No Member Force Analysis performed!
+     44     Fictitious Member: No Member Force Analysis performed!
+     45     Fictitious Member: No Member Force Analysis performed!
+     46     Fictitious Member: No Member Force Analysis performed!
+     47     Fictitious Member: No Member Force Analysis performed!
+     48     Fictitious Member: No Member Force Analysis performed!
+     49     Fictitious Member: No Member Force Analysis performed!
+     50     Fictitious Member: No Member Force Analysis performed!
+     51     Fictitious Member: No Member Force Analysis performed!
+     52     Fictitious Member: No Member Force Analysis performed!
+     53     Fictitious Member: No Member Force Analysis performed!
+     54     Fictitious Member: No Member Force Analysis performed!
+     55     Fictitious Member: No Member Force Analysis performed!
+     56     Fictitious Member: No Member Force Analysis performed!
+
+ TABLE  9:        Shear Stress Analysis
+
+               Max. Shear      Location from       Member
+  Member         Stress          Neg. End          Length
+  Number         (PSI)             (in)             (in)
+
+      1           80.416            0.000           76.554
+      2           50.748            0.000           12.711
+      3          -79.057           63.978           63.978
+      4           63.854            0.000           74.146
+      5           70.539            0.000           75.472
+      6          -70.539           75.472           75.472
+      7          -63.854           74.146           74.146
+      8           79.057            0.000           63.978
+      9          -50.748           12.711           12.711
+     10          -80.416           76.554           76.554
+     11           28.128            0.000           85.570
+     12          -24.942           83.420           83.420
+     13           13.161            0.000           17.830
+     14          -12.244           65.990           65.990
+     15          -12.733           84.020           84.020
+     16           12.244            0.000           65.990
+     17          -13.161           17.830           17.830
+     18           24.942            0.000           83.420
+     19          -28.128           85.570           85.570
+     20            0.000           26.491           26.491
+     21            0.000           76.112           76.112
+     22            0.000           47.162           47.162
+     23            0.000           79.561           79.561
+     24            0.000           68.584           68.584
+     25            0.000           87.820           87.820
+     26            0.000           87.820           87.820
+     27            0.000           68.584           68.584
+     28            0.000           79.561           79.561
+     29            0.000           47.162           47.162
+     30            0.000           76.112           76.112
+     31            0.000           26.491           26.491
+     32     Fictitious Member: No Shear Stress Analysis performed!
+     33     Fictitious Member: No Shear Stress Analysis performed!
+     34     Fictitious Member: No Shear Stress Analysis performed!
+     35     Fictitious Member: No Shear Stress Analysis performed!
+     36     Fictitious Member: No Shear Stress Analysis performed!
+     37     Fictitious Member: No Shear Stress Analysis performed!
+     38     Fictitious Member: No Shear Stress Analysis performed!
+     39     Fictitious Member: No Shear Stress Analysis performed!
+     40     Fictitious Member: No Shear Stress Analysis performed!
+     41     Fictitious Member: No Shear Stress Analysis performed!
+     42     Fictitious Member: No Shear Stress Analysis performed!
+     43     Fictitious Member: No Shear Stress Analysis performed!
+     44     Fictitious Member: No Shear Stress Analysis performed!
+     45     Fictitious Member: No Shear Stress Analysis performed!
+     46     Fictitious Member: No Shear Stress Analysis performed!
+     47     Fictitious Member: No Shear Stress Analysis performed!
+     48     Fictitious Member: No Shear Stress Analysis performed!
+     49     Fictitious Member: No Shear Stress Analysis performed!
+     50     Fictitious Member: No Shear Stress Analysis performed!
+     51     Fictitious Member: No Shear Stress Analysis performed!
+     52     Fictitious Member: No Shear Stress Analysis performed!
+     53     Fictitious Member: No Shear Stress Analysis performed!
+     54     Fictitious Member: No Shear Stress Analysis performed!
+     55     Fictitious Member: No Shear Stress Analysis performed!
+     56     Fictitious Member: No Shear Stress Analysis performed!
+
+ * * * * * * * * * * * * * *  DEFLECTION ANALYSIS * * * * * * * * * * * * * * 
+
+ TABLE 10:        Maximum Member Deflections
+
+              Maximum       Location from     Member
+  Member     Deflection     Negative End      Length
+  Number        (in)            (in)           (in)
+
+      1        -1.1437         76.5539        76.5539
+      2        -1.2448         12.7113        12.7113
+      3        -1.4507         63.9785        63.9785
+      4        -1.5622         74.1456        74.1456
+      5        -1.6086         39.2456        75.4722
+      6        -1.5007         36.2267        75.4722
+      7        -1.4542          0.0000        74.1456
+      8        -1.3427          0.0000        63.9785
+      9        -1.1366          0.0000        12.7113
+     10        -1.0357          0.0000        76.5539
+     11        -1.1832         85.5700        85.5700
+     12        -1.4758         83.4200        83.4200
+     13        -1.5029         17.8300        17.8300
+     14        -1.5600         65.9900        65.9900
+     15        -1.5765         40.3296        84.0200
+     16        -1.5600          0.0000        65.9900
+     17        -1.5029          0.0000        17.8300
+     18        -1.4758          0.0000        83.4200
+     19        -1.1832          0.0000        85.5700
+     20        -0.4073         26.4910        26.4910
+     21        -1.3385         76.1115        76.1115
+     22        -0.4916         47.1620        47.1620
+     23        -1.2025         79.5606        79.5606
+     24        -0.5520         68.5842        68.5842
+     25        -0.9357         87.8199        87.8199
+     26        -0.5447          0.0000        87.8199
+     27        -0.9451          0.0000        68.5842
+     28        -0.8637          0.0000        79.5606
+     29        -0.8933          0.0000        47.1620
+     30        -1.0896          0.0000        76.1115
+     31        -0.8099          0.0000        26.4910
+     32     Fictitious Member: No Member Deflection Analysis performed!
+     33     Fictitious Member: No Member Deflection Analysis performed!
+     34     Fictitious Member: No Member Deflection Analysis performed!
+     35     Fictitious Member: No Member Deflection Analysis performed!
+     36     Fictitious Member: No Member Deflection Analysis performed!
+     37     Fictitious Member: No Member Deflection Analysis performed!
+     38     Fictitious Member: No Member Deflection Analysis performed!
+     39     Fictitious Member: No Member Deflection Analysis performed!
+     40     Fictitious Member: No Member Deflection Analysis performed!
+     41     Fictitious Member: No Member Deflection Analysis performed!
+     42     Fictitious Member: No Member Deflection Analysis performed!
+     43     Fictitious Member: No Member Deflection Analysis performed!
+     44     Fictitious Member: No Member Deflection Analysis performed!
+     45     Fictitious Member: No Member Deflection Analysis performed!
+     46     Fictitious Member: No Member Deflection Analysis performed!
+     47     Fictitious Member: No Member Deflection Analysis performed!
+     48     Fictitious Member: No Member Deflection Analysis performed!
+     49     Fictitious Member: No Member Deflection Analysis performed!
+     50     Fictitious Member: No Member Deflection Analysis performed!
+     51     Fictitious Member: No Member Deflection Analysis performed!
+     52     Fictitious Member: No Member Deflection Analysis performed!
+     53     Fictitious Member: No Member Deflection Analysis performed!
+     54     Fictitious Member: No Member Deflection Analysis performed!
+     55     Fictitious Member: No Member Deflection Analysis performed!
+     56     Fictitious Member: No Member Deflection Analysis performed!
+
+ TABLE 11:        Node Displacements
+
+          Horiz. Displacement   Vertical            Rotational
+   Node   or Roller Direction  Displacement        Displacement
+  Number      (inches)          (inches)      (radians)     (degrees)
+
+      1       0.078902          0.025704    -1.4999E-02     0 51' 33.669"
+      2       0.000038          0.025155    -1.4680E-02     0 50' 28.010"
+      3       0.086092         -0.002256    -1.3767E-02     0 47' 19.669"
+      4       0.000000          0.000000    -1.3447E-02     0 46' 13.653"
+      5       0.085254         -0.200331    -1.4016E-02     0 48' 10.947"
+      6       0.049029         -0.199701    -1.2677E-02     0 43' 34.887"
+      7       0.257783         -1.114428    -8.1288E-03     0 27' 56.684"
+      8       0.107740         -1.183182    -7.6688E-03     0 26' 21.808"
+      9       0.273796         -1.214681    -7.1320E-03     0 24' 31.076"
+     10       0.280877         -1.425075    -1.8070E-03     0  6' 12.717"
+     11       0.159904         -1.475848    -1.3917E-03     0  4' 47.049"
+     12       0.169405         -1.502896    -1.4352E-03     0  4' 56.024"
+     13       0.263756         -1.544373    -1.1469E-03     0  3' 56.569"
+     14       0.204567         -1.559977    -5.3886E-04     0  1' 51.148"
+     15       0.225035         -1.544875     2.2076E-03     0  7' 35.341"
+     16       0.222605         -1.547387     3.7005E-16     0  0'  0.000"
+     17       0.220174         -1.544875    -2.2076E-03     0  7' 35.341"
+     18       0.240643         -1.559977     5.3886E-04     0  1' 51.148"
+     19       0.181454         -1.544373     1.1469E-03     0  3' 56.569"
+     20       0.275805         -1.502896     1.4352E-03     0  4' 56.024"
+     21       0.285306         -1.475848     1.3917E-03     0  4' 47.049"
+     22       0.164333         -1.425075     1.8070E-03     0  6' 12.717"
+     23       0.171414         -1.214681     7.1320E-03     0 24' 31.076"
+     24       0.337470         -1.183182     7.6688E-03     0 26' 21.808"
+     25       0.187427         -1.114428     8.1288E-03     0 27' 56.684"
+     26       0.359956         -0.200331     1.4016E-02     0 48' 10.947"
+     27       0.396181         -0.199701     1.2677E-02     0 43' 34.887"
+     28       0.359118         -0.002256     1.3767E-02     0 47' 19.669"
+     29       0.445210          0.000000     1.3447E-02     0 46' 13.653"
+     30       0.366308          0.025704     1.4999E-02     0 51' 33.669"
+     31       0.445172          0.025155     1.4680E-02     0 50' 28.010"
+

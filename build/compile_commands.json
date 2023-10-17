@@ -1,0 +1,92 @@
+[
+{
+  "directory": "/home/keven/Documents/Dev/Workspace/caps/build",
+  "command": "/usr/bin/g++ -DFMT_SHARED -g -std=gnu++20 -o src/CMakeFiles/caps.dir/main.cpp.o -c /home/keven/Documents/Dev/Workspace/caps/src/main.cpp",
+  "file": "/home/keven/Documents/Dev/Workspace/caps/src/main.cpp"
+},
+{
+  "directory": "/home/keven/Documents/Dev/Workspace/caps/build",
+  "command": "/usr/bin/g++ -DFMT_SHARED -g -std=gnu++20 -o src/CMakeFiles/caps.dir/ConcentratedSystem.cpp.o -c /home/keven/Documents/Dev/Workspace/caps/src/ConcentratedSystem.cpp",
+  "file": "/home/keven/Documents/Dev/Workspace/caps/src/ConcentratedSystem.cpp"
+},
+{
+  "directory": "/home/keven/Documents/Dev/Workspace/caps/build",
+  "command": "/usr/bin/g++ -DFMT_SHARED -g -std=gnu++20 -o src/CMakeFiles/caps.dir/DistributedSystem.cpp.o -c /home/keven/Documents/Dev/Workspace/caps/src/DistributedSystem.cpp",
+  "file": "/home/keven/Documents/Dev/Workspace/caps/src/DistributedSystem.cpp"
+},
+{
+  "directory": "/home/keven/Documents/Dev/Workspace/caps/build",
+  "command": "/usr/bin/g++ -DFMT_SHARED -g -std=gnu++20 -o src/CMakeFiles/caps.dir/LoadAndInteraction.cpp.o -c /home/keven/Documents/Dev/Workspace/caps/src/LoadAndInteraction.cpp",
+  "file": "/home/keven/Documents/Dev/Workspace/caps/src/LoadAndInteraction.cpp"
+},
+{
+  "directory": "/home/keven/Documents/Dev/Workspace/caps/build",
+  "command": "/usr/bin/g++ -DFMT_SHARED -g -std=gnu++20 -o src/CMakeFiles/caps.dir/LoadNodal.cpp.o -c /home/keven/Documents/Dev/Workspace/caps/src/LoadNodal.cpp",
+  "file": "/home/keven/Documents/Dev/Workspace/caps/src/LoadNodal.cpp"
+},
+{
+  "directory": "/home/keven/Documents/Dev/Workspace/caps/build",
+  "command": "/usr/bin/g++ -DFMT_SHARED -g -std=gnu++20 -o src/CMakeFiles/caps.dir/LoadPoint.cpp.o -c /home/keven/Documents/Dev/Workspace/caps/src/LoadPoint.cpp",
+  "file": "/home/keven/Documents/Dev/Workspace/caps/src/LoadPoint.cpp"
+},
+{
+  "directory": "/home/keven/Documents/Dev/Workspace/caps/build",
+  "command": "/usr/bin/g++ -DFMT_SHARED -g -std=gnu++20 -o src/CMakeFiles/caps.dir/LoadTrapezoidal.cpp.o -c /home/keven/Documents/Dev/Workspace/caps/src/LoadTrapezoidal.cpp",
+  "file": "/home/keven/Documents/Dev/Workspace/caps/src/LoadTrapezoidal.cpp"
+},
+{
+  "directory": "/home/keven/Documents/Dev/Workspace/caps/build",
+  "command": "/usr/bin/g++ -DFMT_SHARED -g -std=gnu++20 -o src/CMakeFiles/caps.dir/LoadUniform.cpp.o -c /home/keven/Documents/Dev/Workspace/caps/src/LoadUniform.cpp",
+  "file": "/home/keven/Documents/Dev/Workspace/caps/src/LoadUniform.cpp"
+},
+{
+  "directory": "/home/keven/Documents/Dev/Workspace/caps/build",
+  "command": "/usr/bin/g++ -DFMT_SHARED -g -std=gnu++20 -o src/CMakeFiles/caps.dir/MaterialProperty.cpp.o -c /home/keven/Documents/Dev/Workspace/caps/src/MaterialProperty.cpp",
+  "file": "/home/keven/Documents/Dev/Workspace/caps/src/MaterialProperty.cpp"
+},
+{
+  "directory": "/home/keven/Documents/Dev/Workspace/caps/build",
+  "command": "/usr/bin/g++ -DFMT_SHARED -g -std=gnu++20 -o src/CMakeFiles/caps.dir/Member.cpp.o -c /home/keven/Documents/Dev/Workspace/caps/src/Member.cpp",
+  "file": "/home/keven/Documents/Dev/Workspace/caps/src/Member.cpp"
+},
+{
+  "directory": "/home/keven/Documents/Dev/Workspace/caps/build",
+  "command": "/usr/bin/g++ -DFMT_SHARED -g -std=gnu++20 -o src/CMakeFiles/caps.dir/Node.cpp.o -c /home/keven/Documents/Dev/Workspace/caps/src/Node.cpp",
+  "file": "/home/keven/Documents/Dev/Workspace/caps/src/Node.cpp"
+},
+{
+  "directory": "/home/keven/Documents/Dev/Workspace/caps/build",
+  "command": "/usr/bin/g++ -DFMT_SHARED -g -std=gnu++20 -o src/CMakeFiles/caps.dir/PlaneFrame.cpp.o -c /home/keven/Documents/Dev/Workspace/caps/src/PlaneFrame.cpp",
+  "file": "/home/keven/Documents/Dev/Workspace/caps/src/PlaneFrame.cpp"
+},
+{
+  "directory": "/home/keven/Documents/Dev/Workspace/caps/build",
+  "command": "/usr/bin/g++ -DFMT_SHARED -g -std=gnu++20 -o src/CMakeFiles/caps.dir/PPSAFile.cpp.o -c /home/keven/Documents/Dev/Workspace/caps/src/PPSAFile.cpp",
+  "file": "/home/keven/Documents/Dev/Workspace/caps/src/PPSAFile.cpp"
+},
+{
+  "directory": "/home/keven/Documents/Dev/Workspace/caps/build",
+  "command": "/usr/bin/g++ -DFMT_SHARED -g -std=gnu++20 -o src/CMakeFiles/caps.dir/ProblemSize.cpp.o -c /home/keven/Documents/Dev/Workspace/caps/src/ProblemSize.cpp",
+  "file": "/home/keven/Documents/Dev/Workspace/caps/src/ProblemSize.cpp"
+},
+{
+  "directory": "/home/keven/Documents/Dev/Workspace/caps/build",
+  "command": "/usr/bin/g++ -DFMT_SHARED -g -std=gnu++20 -o src/CMakeFiles/caps.dir/Reaction.cpp.o -c /home/keven/Documents/Dev/Workspace/caps/src/Reaction.cpp",
+  "file": "/home/keven/Documents/Dev/Workspace/caps/src/Reaction.cpp"
+},
+{
+  "directory": "/home/keven/Documents/Dev/Workspace/caps/build",
+  "command": "/usr/bin/g++ -DFMT_SHARED -g -std=gnu++20 -o src/CMakeFiles/caps.dir/Report.cpp.o -c /home/keven/Documents/Dev/Workspace/caps/src/Report.cpp",
+  "file": "/home/keven/Documents/Dev/Workspace/caps/src/Report.cpp"
+},
+{
+  "directory": "/home/keven/Documents/Dev/Workspace/caps/build",
+  "command": "/usr/bin/g++ -DFMT_SHARED -g -std=gnu++20 -o src/CMakeFiles/caps.dir/StiffnessMatrix.cpp.o -c /home/keven/Documents/Dev/Workspace/caps/src/StiffnessMatrix.cpp",
+  "file": "/home/keven/Documents/Dev/Workspace/caps/src/StiffnessMatrix.cpp"
+},
+{
+  "directory": "/home/keven/Documents/Dev/Workspace/caps/build",
+  "command": "/usr/bin/g++ -DFMT_SHARED -g -std=gnu++20 -o src/CMakeFiles/caps.dir/StressFactors.cpp.o -c /home/keven/Documents/Dev/Workspace/caps/src/StressFactors.cpp",
+  "file": "/home/keven/Documents/Dev/Workspace/caps/src/StressFactors.cpp"
+}
+]
