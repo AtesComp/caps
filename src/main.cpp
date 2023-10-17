@@ -1,5 +1,5 @@
 //******************************************************************************
-//     Comprehensive Analyzer of Plane Structures
+//     Comprehensive Analyzer for Plane Structures
 //
 // COPYRIGHT: 2020
 //

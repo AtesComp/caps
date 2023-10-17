@@ -22,7 +22,7 @@ const std::string Report::strHeading = std::string() +
         "\n" +
         "     ************************************************************************\n" +
         "     ***     PROGRAM: CAPS                                                ***\n" +
-        "     ***     Comprehensive Analyzer of Plane Structures                   ***\n" +
+        "     ***     Comprehensive Analyzer for Plane Structures                  ***\n" +
         "     ***          Version " + fmt::format("{: 2d}.{:02d}", VERSION_MAJOR, VERSION_MINOR) +
                                        "  Release " + RELEASE_DATE +
                                                            "                       ***\n" +
