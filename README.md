@@ -5,9 +5,7 @@ The purpose of this program is to model stress applied to a 'plane frame' struct
 
 The 'plane frame' structure model is a two dimensional theoretical frame that exists completely in a single plane. Forces applied to the 'plane frame' result in computed stresses tabulated for review.
 
-This program is intended to emulates the original PPSA process closely.
-
-This program is intended to be used as an engineering tool. It assists the user in the analysis of 'plane frame' wood structures. Accuracy of the analog and interpretation of the structural adequacy are the responsibility of the user. The authors assume no responsibility, explicit or implied.
+This program is intended to be used as an engineering tool that emulates the original PPSA process closely. It assists the user in the analysis of 'plane frame' wood structures. Accuracy of the analog and interpretation of the structural adequacy are the responsibility of the user. The authors assume no responsibility, explicit or implied.
 
 *** USE AT YOUR OWN RISK!!! ***
 
